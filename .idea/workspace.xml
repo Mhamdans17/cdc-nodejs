@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5bcf04eb-3445-4d5f-b1f1-70fa741c036d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cdc-service/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/consumer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql/my.cnf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/built/commands.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/built/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/built/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@ioredis/commands/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/cluster-key-slot/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/src/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/src/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/debug/src/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/denque/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Command.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Command.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/DataHandler.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/DataHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Pipeline.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Pipeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Redis.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Redis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/ScanStream.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/ScanStream.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Script.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/Script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/SubscriptionSet.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/SubscriptionSet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/autoPipelining.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/autoPipelining.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterOptions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterSubscriber.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterSubscriber.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterSubscriberGroup.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ClusterSubscriberGroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ConnectionPool.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/ConnectionPool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/DelayQueue.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/DelayQueue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/util.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/cluster/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/AbstractConnector.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/AbstractConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/ConnectorConstructor.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/ConnectorConstructor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/FailoverDetector.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/FailoverDetector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/SentinelIterator.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/SentinelIterator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/SentinelConnector/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/StandaloneConnector.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/StandaloneConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/connectors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/constants/TLSProfiles.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/constants/TLSProfiles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/ClusterAllFailedError.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/ClusterAllFailedError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/MaxRetriesPerRequestError.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/MaxRetriesPerRequestError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/errors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/redis/RedisOptions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/redis/RedisOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/redis/event_handler.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/redis/event_handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/transaction.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/transaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/Commander.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/Commander.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/RedisCommander.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/RedisCommander.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/applyMixin.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/applyMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/debug.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/lodash.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/built/utils/lodash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ioredis/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.defaults/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.defaults/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.defaults/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.defaults/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.isarguments/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.isarguments/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.isarguments/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/lodash.isarguments/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ms/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ms/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ms/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/lib/modern.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/lib/old.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-errors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/changelog.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/lib/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/redis-parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/utils.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/built/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/standard-as-callback/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="33eeGcPmmOZE7vHGRssIEoumCPK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Project\Cdc Database\node_cdc" />
+      <recent name="D:\My Project\Cdc Database\node_cdc\cdc-service" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bcf04eb-3445-4d5f-b1f1-70fa741c036d" name="Changes" comment="" />
+      <created>1759681871516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759681871516</updated>
+      <workItem from="1759681872972" duration="5519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
