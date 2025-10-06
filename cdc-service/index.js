@@ -5,7 +5,7 @@ const {
     MYSQL_HOST = 'localhost',
     MYSQL_USER = 'root',
     MYSQL_PASSWORD = 'root',
-    MYSQL_DB = 'order_db',
+    MYSQL_DB = 'payment',
     REDIS_HOST = '127.0.0.1',
     REDIS_PORT = 6379,
 } = process.env;
@@ -22,16 +22,16 @@ const zongji = new ZongJi({
     database: MYSQL_DB,
 });
 
-console.log('✅ CDC service started. Waiting for MySQL changes...');
+console.log('CDC SERVICE STARTED. WAITING FOR MYSQL CHANGES...');
 
 zongji.on('binlog', async (event) => {
     if (event.getEventName() === 'writerows' || event.getEventName() === 'updaterows' || event.getEventName() === 'deleterows') {
-        console.log('🔄 Binlog Event Detected:', event.getEventName());
+        console.log('BINLOG EVENT DETECTED:', event.getEventName());
         const table = event.tableMap[event.tableId].tableName;
         const rows = event.rows;
         const payload = { table, event: event.getEventName(), rows };
         await redis.publish('cdc_events', JSON.stringify(payload));
-        console.log('📤 Sent to Redis:', payload);
+        console.log('SENT TO REDIS:', payload);
     }
 });
 
@@ -41,7 +41,7 @@ zongji.start({
 });
 
 process.on('SIGINT', () => {
-    console.log('⏹️ Stopping CDC service...');
+    console.log('STOPPING CDC SERVICE');
     zongji.stop();
     process.exit();
 });
