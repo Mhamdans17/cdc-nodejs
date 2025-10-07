@@ -1,13 +1,14 @@
 const ZongJi = require('zongji');
 const Redis = require('ioredis');
+require ('dotenv').config();
 
 const {
-    MYSQL_HOST = 'localhost',
-    MYSQL_USER = 'root',
-    MYSQL_PASSWORD = 'root',
-    MYSQL_DB = 'payment',
-    REDIS_HOST = '127.0.0.1',
-    REDIS_PORT = 6379,
+    MYSQL_HOST,
+    MYSQL_USER,
+    MYSQL_PASSWORD,
+    MYSQL_DB,
+    REDIS_HOST,
+    REDIS_PORT,
 } = process.env;
 
 const redis = new Redis({
@@ -20,6 +21,7 @@ const zongji = new ZongJi({
     user: MYSQL_USER,
     password: MYSQL_PASSWORD,
     database: MYSQL_DB,
+    startAtEnd: true,
 });
 
 console.log('CDC SERVICE STARTED. WAITING FOR MYSQL CHANGES...');

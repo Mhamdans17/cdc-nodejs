@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bcf04eb-3445-4d5f-b1f1-70fa741c036d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/tb_payment.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/consumerOracle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdc-service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cdc-service/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/consumer.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/consumer.js" afterDir="false" />
@@ -14,6 +14,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
