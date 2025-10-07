@@ -1,21 +1,30 @@
 const ZongJi = require('zongji');
-const Redis = require('ioredis');
-require ('dotenv').config();
+const { Kafka } = require('kafkajs');
+require('dotenv').config();
 
 const {
     MYSQL_HOST,
     MYSQL_USER,
     MYSQL_PASSWORD,
     MYSQL_DB,
-    REDIS_HOST,
-    REDIS_PORT,
+    KAFKA_BROKER,
+    KAFKA_TOPIC,
 } = process.env;
 
-const redis = new Redis({
-    host: REDIS_HOST,
-    port: REDIS_PORT,
+// Setup Kafka
+const kafka = new Kafka({
+    clientId: 'cdc-service',
+    brokers: [KAFKA_BROKER], // contoh: 'localhost:9092'
 });
 
+const producer = kafka.producer();
+
+(async () => {
+    await producer.connect();
+    console.log('Kafka Producer Connected.');
+})();
+
+// Setup ZongJi
 const zongji = new ZongJi({
     host: MYSQL_HOST,
     user: MYSQL_USER,
@@ -27,13 +36,25 @@ const zongji = new ZongJi({
 console.log('CDC SERVICE STARTED. WAITING FOR MYSQL CHANGES...');
 
 zongji.on('binlog', async (event) => {
-    if (event.getEventName() === 'writerows' || event.getEventName() === 'updaterows' || event.getEventName() === 'deleterows') {
+    if (['writerows', 'updaterows', 'deleterows'].includes(event.getEventName())) {
         console.log('BINLOG EVENT DETECTED:', event.getEventName());
+
         const table = event.tableMap[event.tableId].tableName;
         const rows = event.rows;
+
         const payload = { table, event: event.getEventName(), rows };
-        await redis.publish('cdc_events', JSON.stringify(payload));
-        console.log('SENT TO REDIS:', payload);
+
+        try {
+            await producer.send({
+                topic: KAFKA_TOPIC || 'cdc_events',
+                messages: [
+                    { value: JSON.stringify(payload) }
+                ],
+            });
+            console.log('SENT TO KAFKA:', payload);
+        } catch (err) {
+            console.error('KAFKA PRODUCER ERROR:', err);
+        }
     }
 });
 
@@ -42,8 +63,9 @@ zongji.start({
     includeSchema: { [MYSQL_DB]: true },
 });
 
-process.on('SIGINT', () => {
+process.on('SIGINT', async () => {
     console.log('STOPPING CDC SERVICE');
+    await producer.disconnect();
     zongji.stop();
     process.exit();
 });

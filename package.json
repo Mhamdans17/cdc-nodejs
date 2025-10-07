@@ -11,11 +11,12 @@
     "start:all": "npm-run-all --parallel start:service start:consumer"
   },
   "dependencies": {
-    "ioredis": "^5.8.0",
-    "zongji": "github:nevill/zongji",
-    "mysql2": "^3.15.1",
     "debug": "^4.4.3",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "ioredis": "^5.8.0",
+    "kafkajs": "^2.2.4",
+    "mysql2": "^3.15.1",
+    "zongji": "github:nevill/zongji"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
