@@ -1,6 +1,7 @@
 const ZongJi = require('zongji');
 const Redis = require('ioredis');
-require ('dotenv').config();
+require('dotenv').config();
+const chalk = require('chalk');
 
 const {
     MYSQL_HOST,
@@ -24,16 +25,30 @@ const zongji = new ZongJi({
     startAtEnd: true,
 });
 
-console.log('CDC SERVICE STARTED. WAITING FOR MYSQL CHANGES...');
+function timestamp() {
+    return new Date().toISOString().replace('T', ' ').split('.')[0];
+}
+
+console.log(chalk.cyan(`[${timestamp()}] CDC SERVICE STARTED — Listening for MySQL changes...`));
 
 zongji.on('binlog', async (event) => {
-    if (event.getEventName() === 'writerows' || event.getEventName() === 'updaterows' || event.getEventName() === 'deleterows') {
-        console.log('BINLOG EVENT DETECTED:', event.getEventName());
+    const eventName = event.getEventName();
+    if (['writerows', 'updaterows', 'deleterows'].includes(eventName)) {
         const table = event.tableMap[event.tableId].tableName;
         const rows = event.rows;
-        const payload = { table, event: event.getEventName(), rows };
+        const payload = { table, event: eventName, rows };
+
         await redis.publish('cdc_events', JSON.stringify(payload));
-        console.log('SENT TO REDIS:', payload);
+
+        // stringify rows jadi satu baris
+        let rowsText = JSON.stringify(rows);
+        if (rowsText.length > 500) {
+            rowsText = rowsText.substring(0, 500) + '... (truncated)';
+        }
+
+        console.log(
+            `[${timestamp()}] EVENT: ${eventName.toUpperCase()} | TABLE: ${table} | ROWS: ${rowsText}`
+        );
     }
 });
 
@@ -43,7 +58,7 @@ zongji.start({
 });
 
 process.on('SIGINT', () => {
-    console.log('STOPPING CDC SERVICE');
+    console.log(`[${timestamp()}] STOPPING CDC SERVICE`);
     zongji.stop();
     process.exit();
 });
